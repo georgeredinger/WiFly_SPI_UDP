@@ -50,6 +50,8 @@ void loop() {
        Serial.print(c);
        SpiSerial.print(c);
     }
-//    SpiSerial.print("Woof Woof\r\n");
+    SpiSerial.print("Woof Woof\r\n"); // I expect this to be seen by a udp listener on the local network
+    Serial.print("Woof Woof\r\n"); 
+    delay(1000);
 }
 
