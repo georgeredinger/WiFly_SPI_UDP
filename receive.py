@@ -1,12 +1,13 @@
-import socket
+import select, socket 
 
-#UDP_IP = "127.0.0.1"
-UDP_IP = "10.10.50.94"
-UDP_PORT = 5005
+port = 5005  # where do you expect to get a msg?
+bufferSize = 1024 # whatever you need
 
-sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM) 
-sock.bind((UDP_IP, UDP_PORT))
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.bind(('<broadcast>', port))
+s.setblocking(0)
 
 while True:
-      data, addr = sock.recvfrom(1024) 
-      print "received message:", data
+  result = select.select([s],[],[])
+  msg = result[0][0].recv(bufferSize) 
+  print msg

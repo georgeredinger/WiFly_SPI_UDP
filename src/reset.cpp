@@ -68,12 +68,6 @@ void reset_now() {
   Serial.println("Read the sketch documentation for more details.");
   Serial.println();
  
-  Serial.println("Send any character to begin factory reset sequence:");
-  
-  while(!Serial.available()) {
-    // Wait for a character
-  }
-
   Serial.println();
   
   // --------------------------
@@ -122,9 +116,6 @@ void reset_now() {
   Serial.println(" * Use $$$ (with no line ending) to enter WiFly command mode. (\"CMD\")");
   Serial.println(" * Then send each command followed by a carriage return.");
   Serial.println();
-  
-  Serial.println("Waiting for input:");
-  Serial.println();      
 }
 
 
