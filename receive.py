@@ -1,6 +1,7 @@
 import select, socket 
 
-port = 5005  # where do you expect to get a msg?
+#port = 5005  # where do you expect to get a msg?
+port = 55555  # where do you expect to get a msg?
 bufferSize = 1024 # whatever you need
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

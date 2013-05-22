@@ -26,20 +26,13 @@ void setup() {
         }
     }
     Serial.println("Associated!");
-    SpiSerial.print("get ip\r\n");
-    echo();
-    SpiSerial.print("set ip proto 1\r\n"); // enter UDP mode
-    echo();
-    SpiSerial.print("set ip host 10.10.50.255\r\n"); // udp destination ip address
-    echo();
-    SpiSerial.print("set ip remote 5005\r\n"); // udp destination ip address
-    echo();
-    SpiSerial.print("save\r\n"); // save to rn-131c nv memory
-    echo();
-    echo();
-    SpiSerial.print("reboot\r\n"); //  reboot rn-131c
-    echo();
-    SpiSerial.print("exit\r\n"); //  exit "command" mode enter "transparent" mode 
+    SpiSerial.print("get ip\r\n");                    echo();// show ip address etc
+    SpiSerial.print("set ip proto 1\r\n");            echo();// enter UDP mode 
+    SpiSerial.print("set ip host 10.10.50.255\r\n");  echo();// udp destination ip address
+    SpiSerial.print("set ip remote 5005\r\n");        echo();// udp destination ip address
+    SpiSerial.print("save\r\n");                      echo();// save to rn-131c nv memory
+    SpiSerial.print("reboot\r\n");                    echo();//  reboot rn-131c
+    SpiSerial.print("exit\r\n");                             //  exit "command" mode enter "transparent" mode 
     Serial.print("ready to send via UDP");
 }
 
