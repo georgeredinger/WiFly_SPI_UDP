@@ -33,9 +33,16 @@ void setup() {
   SpiSerial.print(ssid_cmd);SpiSerial.print("\r");echo();
   SpiSerial.print(phrase_cmd);SpiSerial.print("\r");echo();
   SpiSerial.print(join_cmd);SpiSerial.print("\r");echo();
+
+//  SpiSerial.print("set t z 23\r");echo();
+//  SpiSerial.print("set time address 129.6.15.28\r");echo();
+//  SpiSerial.print("set time port 123\r");echo();
+//  SpiSerial.print("set t e 1\n");echo();
+
   SpiSerial.print("set ip proto 1\r");echo();
   SpiSerial.print("set ip host 255.255.255.255\r");echo();
   SpiSerial.print("set ip remote 55555\r");echo();
+
   SpiSerial.print("save\r");echo();
   SpiSerial.print("reboot\r");echo();
   delay(2000);
